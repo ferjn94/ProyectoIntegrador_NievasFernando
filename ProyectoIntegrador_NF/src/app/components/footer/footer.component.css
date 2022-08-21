@@ -1,0 +1,8 @@
+.row{
+    background-color: azure;
+    text-align: center;
+}
+.footer{
+    font-size: 14px;
+    display: flex;
+}
