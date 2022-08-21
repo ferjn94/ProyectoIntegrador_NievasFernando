@@ -27,11 +27,11 @@
               "src/assets"
             ],
             "styles": [
-              "ProyectoIntegrador_NF\node_modules\bootstrap/dist/css/bootstrap.css",
+              "/Argentina Programa/ProyectoFinal/ProyectoIntegrador_NievasFernando/node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
             "scripts": [
-              "ProyectoIntegrador_NF/node_modules/bootstrap/dist/js/bootstrap.js"
+              "/Argentina Programa/ProyectoFinal/ProyectoIntegrador_NievasFernando/node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
