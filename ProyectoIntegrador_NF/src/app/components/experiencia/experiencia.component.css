@@ -1,0 +1,10 @@
+.row{
+    margin-top: 100px;
+    padding: 20px;
+}
+div{
+    background-color: aliceblue;
+}
+h1,h3{
+    display: inline;
+}
