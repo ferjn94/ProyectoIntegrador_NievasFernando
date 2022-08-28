@@ -6,11 +6,11 @@ import javax.validation.constraints.NotBlank;
 
 public class LoginUsuario {
     @NotBlank
-  private String nombreUsuario;
+    private String nombreUsuario;
     @NotBlank
-private String password;
+    private String password;
     
-    //Getter & Setter
+    //Getter y Setter
 
     public String getNombreUsuario() {
         return nombreUsuario;
@@ -28,5 +28,4 @@ private String password;
         this.password = password;
     }
     
-
 }

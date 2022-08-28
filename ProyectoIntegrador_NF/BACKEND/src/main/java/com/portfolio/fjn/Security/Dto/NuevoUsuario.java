@@ -12,7 +12,7 @@ public class NuevoUsuario {
     private String password;
     private Set<String> roles = new HashSet<>();
     
-    //Getters and Setters
+    //Getters & Setters
 
     public String getNombre() {
         return nombre;

@@ -13,27 +13,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
-
 @Entity
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotNull
+     @NotNull
     private String nombre;
-    @NotNull
-    @Column(unique=true)
+     @NotNull
+     @Column(unique = true)
     private String nombreUsuario;
-    @NotNull
+     @NotNull
     private String email;
-    @NotNull
+     @NotNull
     private String password;
-    @ManyToMany(fetch=FetchType.EAGER)
-    @JoinTable(name="usuario_rol", joinColumns = @JoinColumn(name="usuario_id"), inverseJoinColumns=@JoinColumn(name="rol_id"))
-            private Set<Rol> roles = new HashSet<>();
-    //constructor
-
-    public Usuario() {
+     @ManyToMany(fetch = FetchType.EAGER)
+     @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name="usuario_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
+     private Set<Rol> roles = new HashSet<>();
+     
+     //Constructores
+     
+     public Usuario() {
     }
 
     public Usuario(String nombre, String nombreUsuario, String email, String password) {
@@ -43,7 +43,7 @@ public class Usuario {
         this.password = password;
     }
     
-    //Getter y Setter
+    //Getter Y Setter
 
     public int getId() {
         return id;
@@ -92,7 +92,5 @@ public class Usuario {
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
-    
-     
     
 }
