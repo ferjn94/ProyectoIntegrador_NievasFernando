@@ -34,15 +34,16 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class AuthController {
     @Autowired
-    PasswordEncoder passwordEncoder; 
+    PasswordEncoder passwordEncoder;
     @Autowired
-     AuthenticationManager authenticationManager;
+    AuthenticationManager authenticationManager;
     @Autowired
-       UsuarioService usuarioService;     
+    UsuarioService usuarioService;
     @Autowired
     RolService rolService;
     @Autowired
     JwtProvider jwtProvider;
+    
     @PostMapping("/nuevo")
      public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario,BindingResult bindingResult){
          if (bindingResult.hasErrors())
@@ -76,5 +77,4 @@ public class AuthController {
          JwtDto jwtDto = new JwtDto(jwt, userDetails.getUsername(), userDetails.getAuthorities());
          return new ResponseEntity(jwtDto,HttpStatus.OK);
          
-     }
-}
+     }}
