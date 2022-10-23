@@ -22,7 +22,7 @@ expURL = 'http://localhost:8080/explab/'
     return this.httpClient.post<any>(this.expURL + 'create', experiencia);
   }
 
-  public (id:number,experiencia: Experiencia): Observable<any>{
+  public update (id:number,experiencia: Experiencia): Observable<any>{
     return this.httpClient.put<any>(this.expURL +  `update/${id}`,experiencia);
 
   }
