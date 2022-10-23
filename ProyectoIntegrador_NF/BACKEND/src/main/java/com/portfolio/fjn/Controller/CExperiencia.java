@@ -68,6 +68,12 @@ public class CExperiencia {
                 return new ResponseEntity(new Mensaje("Experiencia eliminada"),HttpStatus.OK);
     }
     
-    
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Experiencia> getById(@PathVariable("id") int id){
+        if(!sExperiencia.existsById(id))
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+        Experiencia experiencia = sExperiencia.getOne(id).get();
+        return new ResponseEntity(experiencia, HttpStatus.OK);
+    }
     
 }
